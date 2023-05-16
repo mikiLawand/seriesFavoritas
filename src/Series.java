@@ -60,8 +60,12 @@ public class Series implements Comparable<Series>{
 
     @Override
     public int compareTo(Series series) {
-       return Integer.compare(this.getDuracaoEp(), series.getDuracaoEp());
+       int duracaoEp = Integer.compare(this.getDuracaoEp(), series.getDuracaoEp());
+       if (duracaoEp != 0) return duracaoEp;
+
+       return this.getGenero().compareToIgnoreCase(series.getGenero());
     }
+
 }
 
 

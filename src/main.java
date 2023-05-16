@@ -27,5 +27,9 @@ public class main {
         minhasSeries3.addAll(minhasSeries);
         for (Series series: minhasSeries3) System.out.println(series.getTitulo() + " - " + series.getGenero() + " - " + series.getDuracaoEp());
         
+        System.out.println("Ordem por Titulo/Genero/Duração do episodio: ");
+        Set<Series> minhasSeries4 = new TreeSet<>(new ComparatorTituloGeneroDuracaoEp());
+        minhasSeries3.addAll(minhasSeries);
+        for (Series series: minhasSeries3) System.out.println(series.getTitulo() + " - " + series.getGenero() + " - " + series.getDuracaoEp());
     }
 }
