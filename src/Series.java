@@ -2,9 +2,9 @@ import java.util.Objects;
 
 public class Series implements Comparable<Series>{
 
-    private String titulo;
-    private String genero;
-    private Integer duracaoEp;
+    String titulo;
+    String genero;
+    Integer duracaoEp;
     
     public String getTitulo() {
         return titulo;

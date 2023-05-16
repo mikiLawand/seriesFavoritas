@@ -1,5 +1,4 @@
 import java.util.*;
-import java.util.TreeSet;
 
 public class main {
     public static void main(String[] args) {
@@ -31,5 +30,15 @@ public class main {
         Set<Series> minhasSeries4 = new TreeSet<>(new ComparatorTituloGeneroDuracaoEp());
         minhasSeries3.addAll(minhasSeries);
         for (Series series: minhasSeries3) System.out.println(series.getTitulo() + " - " + series.getGenero() + " - " + series.getDuracaoEp());
+
+        System.out.println("Ordem de genero: ");
+        Set<Series> minhasSeries5 = new TreeSet<>(new ComparatorGenero());
+        for (Series series: minhasSeries3) System.out.println(series.getTitulo() + " - " + series.getGenero() + " - " + series.getDuracaoEp());
+
+        System.out.println("Ordem por duração de episodio: ");
+        Set<Series> minhasSeries6 = new TreeSet<>(new ComparatorDuracaoEp());
+        minhasSeries6.addAll(minhasSeries);
+        for (Series series: minhasSeries6) System.out.println(series.getTitulo() + " - " + series.getGenero() + " - " + series.getDuracaoEp());
     }
+      
 }
